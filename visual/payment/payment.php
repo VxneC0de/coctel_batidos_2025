@@ -16,7 +16,6 @@ if (isset($_SESSION['who'])) { ?>
             .close_ocult {
                 display: none;
             }
-            
         </style>
     </head>
 
@@ -470,7 +469,6 @@ if (isset($_SESSION['who'])) { ?>
         </script>
 
         <script>
-            /*
             document.addEventListener('DOMContentLoaded', () => {
                 const pickupTimeSelect = document.getElementById('pickupTime');
 
@@ -580,7 +578,7 @@ if (isset($_SESSION['who'])) { ?>
                 // Actualizar opciones cada minuto
                 setInterval(updatePickupTimeOptions, 60000);
             });
-            */
+            
         </script>
 
         <script>
@@ -674,11 +672,11 @@ if (isset($_SESSION['who'])) { ?>
                 }
             }
 
-            /*const isStoreClosed = () => {
+            const isStoreClosed = () => {
                 const currentDate = new Date();
                 const currentHour = currentDate.getHours();
                 return currentHour >= 13 || currentHour < 6;
-            }*/
+            }
 
             document.getElementById('orderForm').addEventListener('submit', function(event) {
                 const firstName = document.getElementById('firstName');
@@ -697,10 +695,10 @@ if (isset($_SESSION['who'])) { ?>
                 document.querySelector('.error_div').style.display = 'none';
                 document.querySelector('.container_error').style.display = 'none';
 
-                /*if (isStoreClosed()) {
+                if (isStoreClosed()) {
                     setError('La tienda está cerrada.');
                     valid = false;
-                }*/
+                }
 
                 if (firstName.value.trim() === '') {
                     setError('Nombre <span>es un campo requerido.</span>');
