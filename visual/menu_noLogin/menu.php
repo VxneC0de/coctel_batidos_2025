@@ -41,7 +41,7 @@ while ($ver = mysqli_fetch_array($consult)) {
 
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    
+
                     <?php if (!isset($_SESSION['who'])): ?>
                         alert('Debe registrarse para poder hacer un pedido.');
                         window.location.href = '../login/login.php';
@@ -53,6 +53,26 @@ while ($ver = mysqli_fetch_array($consult)) {
             });
         });
     </script>
+    <style>
+        .banner_card:nth-child(1) {
+            background-image: url("./img/banner-1.png");
+        }
+
+        .banner_card:nth-child(2) {
+            background-image: url("./img/banner-2.png");
+        }
+
+        .banner_card:nth-child(3) {
+            background-image: url("./img/banner-3.png");
+        }
+
+        .footer {
+            background-image: url("./img/footer-bg.png");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
 <body>

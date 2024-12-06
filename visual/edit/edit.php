@@ -12,6 +12,11 @@ if (isset($_SESSION['who'])) { ?>
         <link rel="stylesheet" href="./edit.css">
         <title>Editar Producto</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+            .close_ocult {
+                display: none;
+            }
+        </style>
     </head>
 
     <body>

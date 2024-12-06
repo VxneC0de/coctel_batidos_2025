@@ -12,6 +12,26 @@ if (isset($_SESSION['who'])) { ?>
         <link rel="stylesheet" href="./menu.css">
         <title>Menu</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+            .banner_card:nth-child(1) {
+                background-image: url("./img/banner-1.png");
+            }
+
+            .banner_card:nth-child(2) {
+                background-image: url("./img/banner-2.png");
+            }
+
+            .banner_card:nth-child(3) {
+                background-image: url("./img/banner-3.png");
+            }
+
+            .footer {
+                background-image: url("./img/footer-bg.png");
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
 
     <body>
@@ -104,7 +124,7 @@ if (isset($_SESSION['who'])) { ?>
                             $subtotal = 0;
 
                             while ($ver = mysqli_fetch_array($consult)) {
-                                $id_cart = $ver['id_cart']; 
+                                $id_cart = $ver['id_cart'];
                                 $nameProduct = $ver['name_product'];
                                 $priceCart = $ver['price_cart'];
                                 $quantityCart = $ver['quantity_cart'];
@@ -435,7 +455,7 @@ if (isset($_SESSION['who'])) { ?>
 
                 document.getElementById('productQuantity').value = 1;
 
-         
+
                 const productData = JSON.parse(document.querySelector('.add_to_cart').dataset.product);
                 productData.quantity = 1;
                 document.querySelector('.add_to_cart').dataset.product = JSON.stringify(productData);
@@ -471,7 +491,7 @@ if (isset($_SESSION['who'])) { ?>
 
                 if (productData.status != 1) {
                     alert('El producto no está disponible, no se puede agregar al carrito.');
-     
+
                     document.querySelector('.modal_overlay').style.display = 'none';
                     document.querySelector('.show_order').style.display = 'none';
                     return;
@@ -535,7 +555,7 @@ if (isset($_SESSION['who'])) { ?>
         `;
                     form.insertAdjacentHTML('beforeend', hiddenInputsHTML);
 
-          
+
                     cartItem.querySelector('.remove_cart_item').addEventListener('click', function(e) {
                         e.preventDefault();
                         cartItem.remove();
@@ -547,7 +567,7 @@ if (isset($_SESSION['who'])) { ?>
                 updateSubtotal();
                 updateCartQuantity(productData.quantity, isExistingProduct);
 
-         
+
                 document.querySelector('.modal_overlay').style.display = 'none';
                 document.querySelector('.show_order').style.display = 'none';
             });
@@ -557,10 +577,10 @@ if (isset($_SESSION['who'])) { ?>
                 let currentQuantity = parseInt(cartIcon.textContent);
 
                 if (isExistingProduct) {
-                    
+
                     currentQuantity += addedQuantity;
                 } else {
-                   
+
                     currentQuantity += addedQuantity;
                 }
 

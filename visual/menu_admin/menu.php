@@ -21,6 +21,25 @@ if (isset($_SESSION['who'])) { ?>
             .close_ocult {
                 display: none;
             }
+
+            .banner_card:nth-child(1) {
+                background-image: url("./img/banner-1.png");
+            }
+
+            .banner_card:nth-child(2) {
+                background-image: url("./img/banner-2.png");
+            }
+
+            .banner_card:nth-child(3) {
+                background-image: url("./img/banner-3.png");
+            }
+
+            .footer {
+                background-image: url("./img/footer-bg.png");
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
         </style>
     </head>
 
