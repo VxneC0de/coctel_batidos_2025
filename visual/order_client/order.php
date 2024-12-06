@@ -12,6 +12,11 @@ if (isset($_SESSION['who'])) { ?>
         <link rel="stylesheet" href="./order.css">
         <title>Ordenes</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+            .user_info input,.user_payment input  {
+                pointer-events: none;
+            }
+        </style>
     </head>
 
     <body>

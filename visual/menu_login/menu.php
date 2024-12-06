@@ -13,6 +13,10 @@ if (isset($_SESSION['who'])) { ?>
         <title>Menu</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <style>
+            .close_ocult {
+                display: none !important;
+            }
+
             .banner_card:nth-child(1) {
                 background-image: url("./img/banner-1.png");
             }
@@ -144,9 +148,10 @@ if (isset($_SESSION['who'])) { ?>
                                         </div>
                                     </div>
                                     <div class="qty">
-                                        <span>-</span>
+                                        <strong class="numera">N°:</strong>
+                                        <span class="close_ocult">-</span>
                                         <strong><?php echo $quantityCart; ?></strong>
-                                        <span>+</span>
+                                        <span class="close_ocult">+</span>
                                     </div>
                                 </div>
 
@@ -538,9 +543,10 @@ if (isset($_SESSION['who'])) { ?>
                 </div> 
             </div>
             <div class="qty">
-                <span>-</span>
+                <strong class="numera">N°:</strong>
+                <span class="close_ocult">-</span>
                 <strong>${productData.quantity}</strong>
-                <span>+</span>
+                <span class="close_ocult">+</span>
             </div>
         `;
 

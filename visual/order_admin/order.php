@@ -17,6 +17,11 @@ if (isset($_SESSION['who'])) { ?>
                 window.location.reload();
             }, 60000);
         </script>
+        <style>
+            .user_info input,.user_payment input  {
+                pointer-events: none;
+            }
+        </style>
     </head>
 
     <body>
