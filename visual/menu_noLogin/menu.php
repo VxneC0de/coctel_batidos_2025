@@ -86,7 +86,7 @@ while ($ver = mysqli_fetch_array($consult)) {
 
         <div class="wrapper_nav">
 
-            <div class="logo"><a href="./menu.php"><img src="./assets/coctel.jpg" alt="" width="50" height="50"></a></div>
+            <div class="logo"><a href="./menu.php"><img src="./img/coctel.jpg" alt="" width="50" height="50"></a></div>
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
 
@@ -200,7 +200,7 @@ while ($ver = mysqli_fetch_array($consult)) {
         </div>
 
         <div class="header_image">
-            <img src="./assets/hero_2.png" alt="hero" class="img_hero_2">
+            <img src="./img/hero_2.png" alt="hero" class="img_hero_2">
         </div>
 
     </section>
